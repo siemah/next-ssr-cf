@@ -1,6 +1,6 @@
 export const runtime = "edge";
 
-export default function handler(req: Request) {
+export function GET(req: Request) {
   return new Response(
     JSON.stringify({
       data: [],
@@ -10,7 +10,9 @@ export default function handler(req: Request) {
     }),
     {
       status: 200,
-
+      headers: {
+        "content-type": "application/json"
+      }
     }
   );
 }
