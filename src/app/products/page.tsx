@@ -6,7 +6,7 @@ export default async function page() {
   const products = await getProducts();
   console.log(products)
   return (
-    <div tabindex="0" className="focus:outline-none">
+    <div className="focus:outline-none">
       <div className="mx-auto container py-8">
         <div className="flex flex-wrap items-center lg:justify-between justify-center">
           {
