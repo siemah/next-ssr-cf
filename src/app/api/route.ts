@@ -1,9 +1,12 @@
+import getProducts from "@/services/products";
+
 export const runtime = "edge";
 
-export function GET(req: Request) {
+export async function GET(req: Request) {
+  const products = await getProducts();
   return new Response(
     JSON.stringify({
-      data: [],
+      data: products,
       total: 0,
       page: 1,
       message: "Azul a winathan"
