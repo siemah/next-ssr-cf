@@ -17,7 +17,10 @@ export default function Card({ name, image, price, shortDescription }: CardProps
           src={image}
           className="object-contain"
           fill
+          unoptimized
           priority={false}
+          placeholder="blur"
+          blurDataURL={`https://images.weserv.nl/?url=${image}&output=webp&blur=50&quality=100`}
         />
       </div>
       <div className="">
