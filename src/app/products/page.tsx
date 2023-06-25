@@ -4,11 +4,10 @@ import React from 'react'
 
 export default async function page() {
   const products = await getProducts();
-  console.log(products)
   return (
     <div className="focus:outline-none">
       <div className="mx-auto container py-8">
-        <div className="flex flex-wrap items-center lg:justify-between justify-center">
+        <div className="flex flex-wrap flex-shrink-0 items-center lg:justify-between justify-center">
           {
             products.map(product => (
               <Card
