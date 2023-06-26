@@ -1,10 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { CardProps } from '../card'
+import Link from 'next/link'
 
-export default function ProductCard({image, name, price, shortDescription}:CardProps) {
+export default function ProductCard({image, name, price, link}:CardProps) {
   return (
     <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-      <a href="#">
+      <Link href={link}>
         <img className="hover:grow hover:shadow-lg" src={image} />
         <div className="pt-3 flex items-center justify-between">
           <p className="">{name}</p>
@@ -13,7 +15,7 @@ export default function ProductCard({image, name, price, shortDescription}:CardP
           </svg>
         </div>
         <p className="pt-1 text-gray-900">DZD{price}</p>
-      </a>
+      </Link>
     </div>
   )
 }

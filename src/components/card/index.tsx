@@ -6,6 +6,7 @@ export interface CardProps {
   name: string;
   shortDescription: string;
   price: number;
+  link: string;
 }
 export default function Card({ name, image, price, shortDescription }: CardProps) {
   return (
