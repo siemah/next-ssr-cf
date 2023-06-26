@@ -48,8 +48,9 @@ function ProductImage({ images }: any) {
                 <Image
                   src={imgItem.src}
                   alt={"product image"}
-                  fill
                   className=""
+                  fill
+                  unoptimized
                 />
               </button>
             ))
