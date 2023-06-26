@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-interface CardProps {
+export interface CardProps {
   image: string;
   name: string;
   shortDescription: string;
