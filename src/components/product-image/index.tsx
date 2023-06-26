@@ -18,9 +18,11 @@ function ProductImage({ images }: any) {
         <Image
           src={mainImg.src}
           alt={"mainImg.altText"}
-          unoptimized
-          fill
           className="transform duration-500 ease-in-out hover:scale-105"
+          fetchPriority={"high"}
+          fill
+          priority
+          unoptimized
         />
       </div>
       <div className="relative flex border-t border-palette-lighter">

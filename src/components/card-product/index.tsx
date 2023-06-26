@@ -2,12 +2,20 @@
 import React from 'react'
 import { CardProps } from '../card'
 import Link from 'next/link'
+import Image from 'next/image'
 
-export default function ProductCard({image, name, price, link}:CardProps) {
+export default function ProductCard({ image, name, price, link }: CardProps) {
   return (
     <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
       <Link href={link}>
-        <img className="hover:grow hover:shadow-lg" src={image} alt={name} />
+        <Image
+          className="hover:grow hover:shadow-lg"
+          src={image}
+          alt={name}
+          unoptimized
+          priority={false}
+          fetchPriority='low'
+        />
         <div className="pt-3 flex items-center justify-between">
           <p className="">{name}</p>
           <svg className="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
