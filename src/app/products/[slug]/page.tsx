@@ -1,7 +1,7 @@
 import ProductImage from "@/components/product-image";
 import ProductDetails from "@/components/product-info";
 import getProducts from "@/services/products";
-import { Metadata, ResolvingMetadata } from 'next'
+import { Metadata, } from 'next'
 
 type Props = {
   params: { slug: string }
@@ -9,7 +9,6 @@ type Props = {
 
 export async function generateMetadata(
   { params: { slug }, }: Props,
-  parent?: ResolvingMetadata
 ): Promise<Metadata> {
   // fetch data
   const product = await getProducts(slug) as Record<string, any>;
