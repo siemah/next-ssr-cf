@@ -7,6 +7,8 @@ type Props = {
   params: { slug: string }
 }
 
+export const runtime = 'edge';
+
 export async function generateMetadata(
   { params: { slug }, }: Props,
 ): Promise<Metadata> {
