@@ -18,6 +18,7 @@ function ProductImage({ images }: any) {
         <Image
           src={mainImg.src}
           alt={"mainImg.altText"}
+          unoptimized
           fill
           className="transform duration-500 ease-in-out hover:scale-105"
         />
